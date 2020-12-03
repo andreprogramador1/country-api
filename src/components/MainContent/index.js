@@ -1,12 +1,19 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {MainContainer} from './style'
 import FetchApi from '../FetchApi'
+import Nav from '../NavBar'
+import DropSearchContainer from '../DropSearchContainer'
 
 export default function MainContent() {
+
+  const [region, setRegion] = useState('All')
+
   return (
 
     <MainContainer>
-      <FetchApi/>
+      
+      <DropSearchContainer region={region} setRegion={setRegion}/>
+      <FetchApi region={region}/>
     </MainContainer>
   );
 }

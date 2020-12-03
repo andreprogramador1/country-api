@@ -10,11 +10,7 @@ function App() {
   return (
     <>
     <Nav/>
-
-    <DropSearchContainer/>
-    
     <MainContainer/>
-    
     </>
    
   );

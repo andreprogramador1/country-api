@@ -4,7 +4,7 @@ export const ContainerDropSearch = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-
+  width: 100%;
   input {
     margin: auto;
     width: 80%;

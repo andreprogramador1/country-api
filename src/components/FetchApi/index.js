@@ -1,16 +1,14 @@
 import React, {useState, useEffect} from "react";
 
-export default function FetchApi() {
+export default function FetchApi({ region }) {
   const [data, setData] = useState([]);
   
   useEffect(() => {
     async function getContent() {
       try {
-        const response = await fetch('https://restcountries.eu/rest/v2/region/europe')
-        
-        //console.log(response)
+        const response = await fetch(region === 'All' ? 'https://restcountries.eu/rest/v2/all' : 'https://restcountries.eu/rest/v2/region/'+ region)
+
         const data = await response.json()
-        //console.log(flag)
   
         setData(data);
     
@@ -19,7 +17,7 @@ export default function FetchApi() {
       }
     }
     getContent();
-  }, []);
+  }, [region]);
   
   return (
    <>
