@@ -59,8 +59,8 @@ export default function DetailApi() {
 
           <div className="bottom-content">
             <h1>Border countries</h1>
-            <ul>
-              {country.borders.map((item, i) => <li key={i}>{item}</li>)}
+            <ul className='list'>
+              {country.borders.length == 0 ? <li>None</li> :  country.borders.map((item, i) => <li key={i}>{item}</li>)}
             </ul>   
           </div>
 

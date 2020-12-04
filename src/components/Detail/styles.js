@@ -48,5 +48,32 @@ export const Container = styled.div`
     list-style: none;
   }
 
+  .bottom-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h1 {
+      text-align: center;
+    }
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    li {
+      background-color: white;
+      padding: 7px 12px;
+      margin-bottom: 7px;
+      box-shadow: 0 3px 1px rgba(0,0,0,0.1);
+    }
+    /* ul:not(first-child) {
+      li {
+        margin-left: 5px;
+      }
+    } */
+  }
+
 `;
 
