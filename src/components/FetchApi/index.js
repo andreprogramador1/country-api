@@ -32,7 +32,7 @@ export default function FetchApi({ region }) {
           <div className="inner-card-content">
             <h1>{country.name}</h1>
             <strong>Population:</strong>
-            <span>{country.population}</span><br/>
+            <span>{country.population.toString().replace(/\B(?=(\d{3})+(?!\d))/g,",")}</span><br/>
             <strong>Region:</strong>
             <span>{country.region}</span><br/>
             <strong>Capital:</strong>

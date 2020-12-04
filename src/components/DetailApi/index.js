@@ -38,7 +38,7 @@ export default function DetailApi() {
             <strong>Native Name:</strong>
             <span>{country.nativeName}</span><br/>
             <strong>Population:</strong>
-            <span>{country.population}</span><br/>
+            <span>{country.population.toString().replace(/\B(?=(\d{3})+(?!\d))/g,",")}</span><br/>
             <strong>Sub Region:</strong>
             <span>{country.subregion}</span><br/>
             <strong>Region:</strong>
