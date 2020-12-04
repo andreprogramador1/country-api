@@ -9,11 +9,13 @@ export default function MainContent() {
   const [region, setRegion] = useState('All')
 
   return (
-
+    <>
+    <Nav/>
     <MainContainer>
       
       <DropSearchContainer region={region} setRegion={setRegion}/>
       <FetchApi region={region}/>
     </MainContainer>
+    </>
   );
 }

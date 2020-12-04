@@ -5,12 +5,19 @@ import FetchApi from './components/FetchApi';
 import DropSearchContainer from './components/DropSearchContainer';
 import MainContainer from './components/MainContent';
 
+import { BrowserRouter } from 'react-router-dom'
+import Routes from './routes'
+
 function App() {
 
   return (
+    
     <>
-    <Nav/>
-    <MainContainer/>
+    {/* <Nav/> */}
+    <BrowserRouter>
+    <Routes/>
+    </BrowserRouter>
+    {/* <MainContainer/> */}
     </>
    
   );

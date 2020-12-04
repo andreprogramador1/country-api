@@ -1,7 +1,9 @@
 import React, {useState, useEffect} from "react";
+import { Link } from 'react-router-dom';
 
 export default function FetchApi({ region }) {
   const [data, setData] = useState([]);
+  
   
   useEffect(() => {
     async function getContent() {
@@ -18,10 +20,12 @@ export default function FetchApi({ region }) {
     }
     getContent();
   }, [region]);
+
+
   
   return (
    <>
-   {data.map((country, index) => (<li key={index}><div className="card">
+   {data.map((country, index) => (<li key={index}><Link  to={'/detail/'+country.name} className="card" style={{ textDecoration: 'none', color: 'black' }}>
         
         <div className="card-content">
           <img src={country.flag}/>
@@ -36,7 +40,7 @@ export default function FetchApi({ region }) {
           </div>
           
         </div>
-      </div></li>))}
+      </Link></li>))}
    
    </>
   );
