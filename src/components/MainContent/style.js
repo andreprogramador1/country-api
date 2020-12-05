@@ -13,6 +13,7 @@ export const MainContainer = styled.div`
     border-radius: 7px;
     margin-top: 30px;
     box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    margin: auto;
 
     h1 {
       margin-bottom: 15px;
@@ -37,6 +38,7 @@ export const MainContainer = styled.div`
 
   li {
     list-style: none;
+    margin-top: 25px;
   }
 `;
 

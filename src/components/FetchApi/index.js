@@ -25,7 +25,7 @@ export default function FetchApi({ region }) {
   
   return (
    <>
-   {data.map((country, index) => (<li key={index}><Link  to={'/detail/'+country.name} className="card" style={{ textDecoration: 'none', color: 'black' }}>
+   {/* {data.map((country, index) => (<li key={index}><Link  to={'/detail/'+country.name} className="card" style={{ textDecoration: 'none', color: 'black' }}>
         
         <div className="card-content">
           <img src={country.flag}/>
@@ -40,7 +40,7 @@ export default function FetchApi({ region }) {
           </div>
           
         </div>
-      </Link></li>))}
+      </Link></li>))} */}
    
    </>
   );

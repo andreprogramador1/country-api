@@ -1,12 +1,43 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import {ContainerDropSearch} from './styles'
+import { Link } from 'react-router-dom'
 
 export default function DropSearchContainer({ region ,setRegion }) {
 
+  const [countries, setCountries] = useState([])
+  const [search, setSearch] = useState('')
+  const [filteredCountries, setFilteredCountries] = useState([])
+
+  useEffect(() => {
+    async function getContent() {
+      try {
+        const response = await fetch('https://restcountries.eu/rest/v2/all')
+
+        const data = await response.json()
+
+        setCountries(data)
+
+      } catch (error) {
+        console.error(error)
+      }
+    }
+    getContent();
+  }, []);
+
+  useEffect(() => {
+    setFilteredCountries(
+      countries.filter( country => {
+        return country.name.includes(search)
+      })
+    )
+  }, [search, countries])
+
+
   return(
+   
     <ContainerDropSearch>
     
-      <input type="text" placeholder='search...'/>
+      <input type="text" placeholder='search...' onChange={e => setSearch(e.target.value)}/>
 
       <select onChange={(e) => {
         const selectedRegion = e.target.value;
@@ -19,6 +50,28 @@ export default function DropSearchContainer({ region ,setRegion }) {
         <option value="Europe">Europe</option>
         <option value="Oceania">Oceania</option>
       </select>
+      
+     
+      {filteredCountries.map((country, index) => (<li key={index}><Link  to={'/detail/'+country.name} className="card" style={{ textDecoration: 'none', color: 'black' }}>
+      
+
+        <div className="card-content">
+          <img src={country.flag}/>
+          <div className="inner-card-content">
+            <h1>{country.name}</h1>
+            <strong>Population:</strong>
+            <span>{country.population.toString().replace(/\B(?=(\d{3})+(?!\d))/g,",")}</span><br/>
+            <strong>Region:</strong>
+            <span>{country.region}</span><br/>
+            <strong>Capital:</strong>
+            <span>{country.capital}</span>
+          </div>
+          
+        </div>
+      </Link></li>))}
+
+
+      
       
     </ContainerDropSearch>
   );

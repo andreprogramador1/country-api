@@ -9,12 +9,12 @@ export default function Detail() {
   return (
     <>
 
-    <Nav/>
+    <Nav style={{ marginBottom: '40px' }}/>
 
-    <Link to='/' style={{ padding: '30px 40px', textDecoration: 'none', color: 'black' }}>Back</Link>
+    
 
     <Container>
-
+      <Link to='/' style={{ textDecoration: 'none', color: 'black', backgroundColor: 'white', boxShadow: '0 3px 7px rgba(0,0,0,0.1)', padding: '10px 30px' }}>Back</Link>
       <DetailApi/>
 
     
