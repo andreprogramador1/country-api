@@ -20,7 +20,7 @@ const Toggle = ({theme,  toggleTheme }) => {
     return (
         <Button onClick={toggleTheme} >
           {console.log(theme)}
-          {theme == 'light' ? 'Light Mode' : 'Dark Mode'}
+          {theme === 'light' ? 'Light Mode' : 'Dark Mode'}
         </Button>
     );
 };
