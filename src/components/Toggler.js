@@ -10,6 +10,9 @@ const Button = styled.button`
   cursor: pointer;
   font-size:0.8rem;
   padding: 0.6rem;
+  position: absolute;
+  right: 16px;
+  top: 32px;
   
 `;
 
