@@ -8,7 +8,8 @@ export const MainContainer = styled.div`
   padding: 20px 40px;
 
   .card-content {
-    background-color: white;
+    background-color: ${({ theme }) => theme.backgroundColor};
+    color: ${({ theme }) => theme.text};
     width: 300px;
     border-radius: 7px;
     margin-top: 30px;

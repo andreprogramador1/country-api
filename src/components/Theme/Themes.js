@@ -10,5 +10,5 @@ export const darkTheme = {
   text: '#FAFAFA',
   toggleBorder: '#6B8096',
   background: '#999',
-  backgroundColor: 'hsl(207, 26%, 17%)'
+  backgroundColor: 'hsl(209, 23%, 22%)'
 }

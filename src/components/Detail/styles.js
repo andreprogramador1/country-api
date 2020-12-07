@@ -65,7 +65,7 @@ export const Container = styled.div`
       justify-content: center;
     }
     li {
-      background-color: white;
+      background-color: ${({ theme }) => theme.backgroundColor};
       padding: 7px 12px;
       margin-bottom: 7px;
       box-shadow: 0 3px 1px rgba(0,0,0,0.1);
@@ -75,6 +75,11 @@ export const Container = styled.div`
         margin-left: 5px;
       }
     } */
+  }
+
+  a{
+    background-color: ${({ theme }) => theme.backgroundColor};
+    color: ${({ theme }) => theme.text};
   }
 
 `;
