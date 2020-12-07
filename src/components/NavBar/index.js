@@ -1,11 +1,14 @@
 import React from "react";
 import {Nav} from "./styles";
 
-export default function NavBar() {
+
+
+export default function NavBar(props) {
+
   return (
     <Nav>
       <strong>Where in the world?</strong>
-      <p>Dark mode</p>
+      {props.children}
     </Nav>
   );
 }
