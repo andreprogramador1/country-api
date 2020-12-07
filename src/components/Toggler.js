@@ -3,8 +3,8 @@ import { func, string } from 'prop-types';
 import styled from "styled-components"
 
 const Button = styled.button`
-  background: ${({ theme }) => theme.background};
-  border: 2px solid ${({ theme }) => theme.toggleBorder};
+  background: none;
+  border: none;
   color: ${({ theme }) => theme.text};
   border-radius: 30px;
   cursor: pointer;
@@ -12,7 +12,7 @@ const Button = styled.button`
   padding: 0.6rem;
   position: absolute;
   right: 16px;
-  top: 32px;
+  top: 22px;
   
 `;
 

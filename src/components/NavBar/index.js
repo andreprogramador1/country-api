@@ -1,6 +1,5 @@
 import React from "react";
 import {Nav} from "./styles";
-import Toggle from "../Toggler"
 import  {useDarkMode} from "../useDarkMode"
 
 export default function NavBar() {
@@ -10,7 +9,6 @@ export default function NavBar() {
   return (
     <Nav>
       <strong>Where in the world?</strong>
-      
     </Nav>
   );
 }

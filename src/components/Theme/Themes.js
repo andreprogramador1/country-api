@@ -1,12 +1,14 @@
 export const lightTheme = {
   body: 'hsl(0, 0%, 98%)',
-  text: '#363537',
+  text: 'hsl(200, 15%, 8%)',
   toggleBorder: '#FFF',
-  background: '#363537',
+  background: '#eee',
+  backgroundColor: '#FFFFFF'
 }
 export const darkTheme = {
-  body: '#363537',
+  body: 'hsl(207, 26%, 17%)',
   text: '#FAFAFA',
   toggleBorder: '#6B8096',
   background: '#999',
+  backgroundColor: 'hsl(207, 26%, 17%)'
 }
