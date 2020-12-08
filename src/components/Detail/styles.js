@@ -32,7 +32,7 @@ export const Container = styled.div`
     }
   }
 
-  .inner-card-content {
+  .inner-card-content-1 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -80,6 +80,94 @@ export const Container = styled.div`
   a{
     background-color: ${({ theme }) => theme.backgroundColor};
     color: ${({ theme }) => theme.text};
+  }
+
+  .inner-card-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+  @media (min-width: 1024px) {
+
+    .card-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50vh;
+      width: 100%;
+
+      img {
+        width: auto;
+        height: 250px;
+        margin-right: 100px;
+      }
+    }
+
+    .inner-card-container {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .bottom-content {
+      display: flex;
+      
+
+      ul {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+      }
+    }
+
+    .inner-card-content-1 {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+      flex: 1;
+      strong {
+        width: 40%;
+      }
+      span {
+        width: 50%;
+      }
+      h1 {
+        width: 100%;
+      }
+    }
+    .inner-card-content-2 {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+      flex: 1;
+      strong {
+        width: 50%;
+        white-space: nowrap;
+      }
+      span {
+        width: 50%;
+      }
+      h1 {
+        width: 100%;
+      }
+      
+    }
+
+    .desktop-drop-search {
+      
+      input {
+        margin-bottom: 0px;
+        border-radius: 0px;
+        flex: 1.2;
+        margin: 0;
+      }
+      select {
+        border-radius: 0px;
+        flex: 0.4;
+      }
+    }
   }
 `;
 

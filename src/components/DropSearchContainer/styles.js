@@ -4,11 +4,11 @@ export const ContainerDropSearch = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
+  //width: 100%;
   
   input {
     margin: auto;
-    width: 30%;
+    width: 60%;
     padding: 15px;
     border-radius: 8px;
     border: none;
@@ -19,7 +19,7 @@ export const ContainerDropSearch = styled.div`
     }
   }
   select {
-    width: 10%;
+    width: 30%;
     margin: auto;
     padding: 15px;
     border-radius: 8px;
@@ -38,6 +38,10 @@ export const ContainerDropSearch = styled.div`
 
     input {
       margin-bottom: 0px;
+      border-radius: 0px;
+    }
+    select {
+      border-radius: 0px;
     }
     
     .card-master-container {
@@ -55,6 +59,8 @@ export const ContainerDropSearch = styled.div`
       flex-direction: row;
       justify-content: space-between;
       margin-top: 30px;
+      width: 60%;
+      margin: auto;
     }
 
     

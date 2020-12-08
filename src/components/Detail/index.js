@@ -15,7 +15,10 @@ export default function Detail() {
 
     <Container>
       <Link to='/' style={{ textDecoration: 'none',  boxShadow: '0 3px 7px rgba(0,0,0,0.1)', padding: '10px 30px' }}>Back</Link>
-      <DetailApi/>
+      <div className="detail-master-container">
+        <DetailApi/>
+      </div>
+      
 
     
 
