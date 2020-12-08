@@ -12,7 +12,7 @@ export const ContainerDropSearch = styled.div`
     padding: 15px;
     border-radius: 8px;
     border: none;
-    
+    margin-bottom: 30px;
     background-color: ${({ theme }) => theme.backgroundColor};
     ::placeholder {
       color: ${({ theme }) => theme.text};
@@ -29,7 +29,16 @@ export const ContainerDropSearch = styled.div`
     color: ${({ theme }) => theme.text};
   }
 
+  .desktop-drop-search {
+      display: flex;
+      flex-direction: column;
+    }
+
   @media (min-width: 1024px) {
+
+    input {
+      margin-bottom: 0px;
+    }
     
     .card-master-container {
       display: flex;
@@ -43,7 +52,9 @@ export const ContainerDropSearch = styled.div`
 
     .desktop-drop-search {
       display: flex;
+      flex-direction: row;
       justify-content: space-between;
+      margin-top: 30px;
     }
 
     
