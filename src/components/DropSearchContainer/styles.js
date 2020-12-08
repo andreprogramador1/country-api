@@ -59,10 +59,14 @@ export const ContainerDropSearch = styled.div`
       flex-direction: row;
       justify-content: space-between;
       margin-top: 30px;
-      width: 60%;
+      //width: 60%;
       margin: auto;
-    }
 
-    
+      input {
+        margin: 0;
+      
+      }
+
+    }
   }
 `;
